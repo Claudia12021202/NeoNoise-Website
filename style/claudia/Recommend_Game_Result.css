@@ -1,0 +1,207 @@
+:root {
+  --purple: #292560;
+  --green: #66fee6;
+  --pink: #f595f0;
+  --gray: #dfdfdf;
+  --white: #ffffff;
+  --black: #000000;
+  --h2: 58px;
+  --h3: 50px;
+  --h4: 34px;
+  --h5: 30px;
+  --h6: 24px;
+  --p: 19px;
+  --small: 12px;
+}
+/* * {
+  outline: 1px solid red;
+} */
+html{
+  background: var(--purple);
+  }
+
+/* ----------------------------S8_Result---------------------------------------------- */
+.ranking_section {
+  width: 100%;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  background: url(../../imgs/claudia/digital_landscape_with_techno_wireframe_design_.svg)
+    no-repeat;
+  background-position: bottom -150px left 0px;
+  background-color: var(--purple);
+  background-size: cover;
+  position: relative;
+  padding-top: 5%;
+  overflow: hidden;
+}
+@keyframes Bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.ranking_section img{
+  animation: 2s Bounce linear infinite;
+}
+.ranking-content {
+  width: 75%;
+}
+.ranking-title {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  font-size: var(--h2);
+  color: var(--pink);
+  /* -webkit-text-stroke: 1px var(--green); */
+  opacity: 0.5;
+  text-shadow: 0 0 2px var(--green);
+}
+.ranking-num {
+  font-size: var(--h3);
+  color: var(--green);
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  background: url(../../imgs/claudia/ranking-circle.svg) center center no-repeat;
+  background-size: contain;
+  /* display: inline-blcok;*/
+}
+.ranking-title-1 {
+  font-size: var(--h5);
+  color: var(--pink);
+  margin: 0;
+}
+.ranking-title-2 {
+  font-size: var(--h6);
+  color: var(--pink);
+  margin: 0;
+}
+.ranking-title-1 span,.ranking-title-2 span{
+  color: var(--white);
+  font-weight: 900;
+}
+.price-1,.price-2,.price-3{
+ color: var(--white);
+  font-weight: 900; 
+}
+.price-1 {
+  font-size: var(--h5);
+}
+.price-2,.price-3 {
+  font-size: var(--h6);
+}
+
+.ranking-no1 img {
+  /* rotate: 270deg; */
+  /* width: 472px; */
+  height: 40%;
+  transform-origin: top left;
+}
+.ranking-no2 img,
+.ranking-no3 img {
+  /* rotate: 270deg; */
+
+  /* width: auto; */
+  height: 30%;
+  transform-origin: top center;
+}
+.ranking-no1,
+.ranking-no2,
+.ranking-no3 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.guitar-shadow {
+  background: -webkit-radial-gradient(ellipse, #66fee722, #66fee759);
+  background: -o-radial-gradient(ellipse, #66fee722, #66fee759);
+  background: -moz-radial-gradient(ellipse, #66fee722, #66fee759);
+  background: radial-gradient(ellipse, #66fee722, #66fee759);
+  width: 150px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 7px 15px #66fee7e7;
+}
+.button-group {
+  width: 10%;
+  position: absolute;
+  left: 85%;
+  bottom: 10%;
+  color: #66fee6;
+  text-decoration: none;
+}
+
+.button-group button {
+  margin-top: 15px;
+  padding: 10px;
+  color: var(--green);
+  border: 2px solid var(--green);
+  background-color: #3cba9259;
+}
+.button-group button:hover {
+  margin-top: 15px;
+  padding: 10px;
+  color: var(--purple);
+  border: 2px solid var(--green);
+  background-color: var(--green);
+  transition: 0.5s;
+}
+.seemore-btn {
+  color: var(--white) !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+.seemore-btn:hover {
+  color: var(--green) !important;
+  transition: 0.5s;
+}
+
+@keyframes ScrollBounce {
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+/* ----------------------------S8_Result(Mobile)------------------------------------- */
+@media screen and (max-width: 768px) {
+  .ranking_section {
+    /* background-image: none; */
+    padding-top: 0;
+    margin-top: 40px;
+    height: calc(100vh - 40px);
+  }
+  .ranking_section::after,
+  .ranking_section::before {
+    display: none;
+  }
+  .ranking-content {
+    width: 100%;
+    height: 100vh;
+  }
+  .ranking-title {
+    width: 100%;
+    font-size: var(--h3);
+    color: var(--purple);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+  }
+  .ranking-no1 {
+    transform: scale(0.75);
+    transform-origin: 50% 10%;
+  }
+  .ranking-no2,
+  .ranking-no3 {
+    transform: scale(0.6);
+    /* opacity: 0.5; */
+    transform-origin: 50% 20%;
+  }
+  .button-group {
+    display: none !important;
+  }
+}

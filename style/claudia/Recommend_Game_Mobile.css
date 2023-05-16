@@ -1,0 +1,202 @@
+@media screen and (max-width: 768px) {
+  /* ------------------------NavBar-------------------------- */
+  .navbar_all{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* --------------------Section & Title(Mobile)------------------ */
+    .bg-frame {
+      display: none;
+    }
+    .hero-section,
+    .section {
+      background: var(--purple);
+      border: none;
+      /* border: 1px solid #ccc; */
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 2.5rem;
+    }
+    /* .hero-section{
+      margin-top: 40px ;
+    } */
+    .title {
+      font-size: var(--h6);
+    }
+    .title-qus {
+      font-size: var(--small);
+    }
+    /* ----------------------Remain_Frame(Mobile)------------------------------ */
+    .remain-frame-small {
+      height: auto;
+      color: var(--white);
+      font-size: var(--small);
+    }
+    .remain-frame-small span {
+      color: var(--pink);
+      font-size: var(--small);
+      margin-right: 5px;
+    }
+    .remain-frame-small p {
+      text-decoration: underline;
+      display: inline;
+    }
+    /* ---------------------Process_Bar & BTN(Pre/Next)(Mobile)--------------- */
+    .process-bar {
+      width: 100%;
+      bottom: 0;
+      left: 50%; 
+      transform: translate(-50%, 0);
+    }
+    .small-process-bg {
+      position: fixed;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #66fee786;
+    }
+    .small-process-bar {
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--green);
+      border-radius: 1px;
+    }
+    .btn-previous,
+    .btn-next {
+      position: absolute;
+      font-size: var(--p);
+      bottom: 10px !important;
+    }
+    .btn-previous {
+      left: 10px;
+    }
+    .btn-next {
+      right: 10px;
+    }
+    /* -----------------------------Hero(Mobile)------------------------------------ */
+    .hero::before {
+      content: "";
+      background: url(../../imgs/claudia/hero-shoot.svg) center center no-repeat;
+      /* background-position: 50% 50%; */
+      background-size: contain;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero h1 {
+      font-size: var(--h5);
+      color: var(--white);
+    }
+    .hero p {
+      font-size: var(--p);
+      color: var(--pink);
+    }
+    /*----------------------S1_Price(Mobile)------------------------*/
+    .wrapper {
+      margin: auto;
+      width: 100%;
+    }
+    .s1-container {
+      margin-top: 10px;
+    }
+    .price-range-scale-group {
+      position: absolute;
+      top: 75%;
+      left: 0;
+      /* padding-left: 5px;
+      padding-right: 5px; */
+    }
+    .price-range-p {
+      font-size: 1rem;
+    }
+    .values {
+      font-size: 22px;
+    }
+    .guitar-count {
+      width: 100%;
+    }
+    /* ----------------------------S2_Color(Mobile)------------------------- */
+    .color-group {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    .color-circle{
+      width: 5rem;
+      height: 5rem;
+      margin: 2%;
+    }
+    .color-label{ 
+      width: 4rem;
+      height: 4rem;
+      border-radius: 2rem;
+      margin: auto;
+      text-align: center;
+    }
+    .btn-select-all {
+      font-size: var(--p);
+      border: 1px solid var(--green);
+      color: var(--green);
+      display: inline-block;
+      width: 35%;
+      margin: auto;
+      text-align: center;
+    }
+    /* --------------------------S3_Music(Mobile)---------------------------- */
+    .s3-content {
+      width: 100%;
+      margin: auto;
+    }
+    .btn-music {
+      font-size: 12px;
+    }
+      .s3-sound, .s4-sound {
+        border: none;
+        position: absolute;
+        top: 0%;
+        left:140%;
+        transform: translate(0,-100%);
+        border: 1px solid var(--green);
+      }
+    /* ----------------------------S4_Tone(Mobile)----------------------------- */
+    .s4-content {
+      width: 90%;
+      margin: auto;
+    }
+    .tone-point-g{
+      left: -40% !important;
+    }
+    .tone-point-p{
+      left: 110% !important;
+    }
+    .s4-content{
+      width: 70%;
+    }
+    /* -----------------------S5_Size & S6_Hand(Mobile)--------------------------------- */
+    .s5-container,
+    .s6-container {
+      width: 100%;
+      margin-top: 20%;
+    }
+    .s5 h6,
+    .s6 h6 {
+      font-size: var(--p);
+      color: var(--white);
+    }
+    .s5-container button {
+      padding-left: 1rem;
+    }
+    /* ----------------------------S7_Loading(Mobile)------------------------------------- */
+    .s7-content p {
+      font-size: var(--h6);
+    }
+
+  }

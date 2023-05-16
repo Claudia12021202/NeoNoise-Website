@@ -1,0 +1,295 @@
+:root {
+    --purple: #292560;
+    --green: #66fee6;
+    --pink: #f595f0;
+    --gray: #dfdfdf;
+    --white: #ffffff;
+    --black: #000000;
+    --h2: 58px;
+    --h3: 50px;
+    --h4: 34px;
+    --h5: 30px;
+    --h6: 24px;
+    --p: 19px;
+    --small: 12px;
+    --frame-hight: 25px;
+    --frame-width: 43px;
+  }
+  /* * {
+    outline: 1px solid red;
+  } */
+  body {
+    /* overflow: hidden; */
+    position: relative;
+    font-family: "Chakra Petch", sans-serif;
+    background-image: linear-gradient(
+      to top,
+      var(--black),
+      #48a1ce,
+      var(--black)
+    );
+  }
+  header {
+    background:var(--purple);
+    height: 50px;
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    z-index: 9999999999;
+  }
+  .card-result {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 50px);
+    /* background-image: linear-gradient(
+      to top,
+      var(--black),
+      #48a1ce,
+      var(--black)
+    ); */
+    z-index: 100;
+  }
+  video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.75;
+    /* z-index: 101; */
+  }
+  .top-btn-group {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1001;
+  }
+  .right-top-btn,
+  .left-top-btn {
+    background: #292560;
+    border: 0;
+    font-size: var(--h6);
+    color: var(--white);
+  }
+  .right-top-btn:hover,
+  .left-top-btn:hover {
+    /* text-decoration: underline; */
+    transition: 0.5s;
+    color: var(--pink);
+  }
+  .card-content {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 0px;
+    letter-spacing: 3px;
+    line-height: 5em;
+  }
+  .card-text-title {
+    text-align: center;
+    color: var(--white);
+    font-size: 40px;
+  }
+  .card-text-title span {
+    text-align: right;
+    color: var(--purple);
+    font-weight: 700;
+    -webkit-text-stroke: 4px #f595f0;
+    text-shadow: 4px 4px 5px #813d7d;
+    font-size: 170px;
+    text-align: right;
+  }
+  .card-text-frame {
+    background: url(../../imgs/claudia/card/card-frame.svg) center center
+      no-repeat;
+    backdrop-filter: blur(5px) !important;
+    background-size: contain;
+    width: 450px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+  }
+  .card-text-frame-content {
+    margin: auto;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card-text-frame h1 {
+    font-size: var(--h6);
+    color: var(--white);
+  }
+  .card-text-frame h6 {
+    font-size: var(--p);
+    color: var(--white);
+  }
+  .card-text-frame p {
+    margin: auto;
+    line-height: 1.5em;
+    color: var(--purple);
+  }
+  /* .card-text-frame button {
+    margin: auto;
+    background-color: var(--white);
+    text-align: center;
+    font-size: var(--h6);
+    line-height: 3rem;
+  }
+  .card-text-frame button:hover {
+    background-color: #f595f074;
+    border: 1px solid var(--pink);
+    box-shadow: 3px 3px 5px var(--pink);
+    color: var(--white);
+    transition: 0.5s;
+  } */
+  .chart-btn{
+    border: none;
+    line-height: 0;
+    cursor: pointer;
+    background: url(../../imgs/claudia/chart-btn.svg)center center no-repeat;
+    background-size: contain;
+  }
+  .chart-btn:hover{
+    border: none;
+    background: url(../../imgs/claudia/chart-btn-hover.svg)center center no-repeat;
+    background-size: contain;
+    /* box-shadow: 3px 3px 5px var(--pink); */
+    /* transition: 0.5s; */
+  }
+  /* -------------------Frame----------------------- */
+  .card-big-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  .frame-border {
+    background: #292560;
+    /* opacity: .8; */
+    position: absolute;
+  }
+  .corner {
+    position: absolute;
+    width: var(--frame-width);
+    height: var(--frame-width);
+    background: url(../../imgs/claudia/card/corner.svg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .top {
+    width: calc(100% - var(--frame-width) * 2);
+    height: var(--frame-hight);
+    left: var(--frame-width);
+    top: 0;
+  }
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+  .right {
+    width: var(--frame-hight);
+    height: calc(100% - var(--frame-width) * 2);
+    right: 0;
+    top: var(--frame-width);
+  }
+  .top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+  }
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
+  .bottom {
+    width: calc(100% - var(--frame-width) * 2);
+    right: var(--frame-width);
+    height: var(--frame-hight);
+    bottom: 0;
+  }
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+  .left {
+    width: var(--frame-hight);
+    top: var(--frame-width);
+    height: calc(100% - var(--frame-width) * 2);
+    left: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* ------CARD----------------------------------------- */
+  .card1:hover {
+    box-shadow: 10px 10px 10px #000;
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    .card-result {
+      height: 150vh;
+    }
+    .card-content {
+      width: 90%;
+      margin: auto;
+      line-height: 3em;
+      padding-top: 70px;
+    }
+    .right-top-btn,
+    .left-top-btn {
+      font-size: var(--p);
+    }
+    .card-text-title {
+      font-size: var(--h5);
+    }
+    .card-text-title span {
+      font-size: 64px;
+      line-height: 0.2rem;
+    }
+    .card-picture img {
+      height: 450px;
+      width: auto;
+    }
+    .card-text-frame {
+      width: 90%;
+    }
+    .card-text-frame-content {
+      margin-top: 0.5%;
+      width: 85%;
+      font-size: var(--small);
+    }
+    .card-text-frame-content button {
+      font-size: var(--p);
+    }
+    .card1 {
+      height: 500px;
+      width: auto;
+    }
+    .card-text-frame h1 {
+      font-size: var(--p);
+    }
+    .card-text-frame h6 {
+      font-size: var(--small);
+    }
+    .card-text-frame p {
+      line-height: 1em;
+    }
+    .chart-btn{
+      line-height: 2em;
+    }
+  }

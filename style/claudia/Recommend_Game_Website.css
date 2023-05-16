@@ -1,0 +1,889 @@
+/* ----------------------ScrollBar_None---------------------- */
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  position: relative;
+  overflow: hidden;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #292560;
+}
+.bg-frame {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  /* background: url(../../imgs/claudia/frame-hero-0511-1.svg) center center no-repeat;
+  /* background-size: cover; */
+  border-top: 50px solid transparent;  
+        border-bottom: 55px solid transparent;
+        border-right: 30px solid transparent;
+        border-left: 30px solid transparent;
+        border-image: url(../../imgs/claudia/frame-bg.svg) 50 30 70 30 stretch;
+  z-index: 999;
+  pointer-events: none;
+}
+:root {
+  --purple: #292560;
+  --green: #66fee6;
+  --pink: #f595f0;
+  --gray: #dfdfdf;
+  --white: #ffffff;
+  --black: #000000;
+  --h2: 58px;
+  --h3: 50px;
+  --h4: 34px;
+  --h5: 30px;
+  --h6: 24px;
+  --p: 19px;
+  --small: 12px;
+}
+.navbar-glass{
+  background: var(--purple) !important;
+  /* padding-top: 10px; */
+}
+.navbar_all {
+  background: var(--purple) !important;
+  padding-top: 10px;
+  margin-top: 0 !important;
+  padding-left: 130px;
+  padding-right: 130px;
+  height: 50px !important;
+} 
+.hero-section {
+  margin-top: 50px;
+  background-color: var(--purple);
+  width: 100%;
+  height: calc(100vh - 50px);
+  position: relative;
+  overflow: hidden;
+}
+.section {
+  background-color: var(--purple);
+  /* background: url(../../imgs/claudia/frame-bg-0511.svg) center center no-repeat; */
+  /* background-size: cover; */
+  /* background-size: 1920px 910px; */
+  /* border-top: 50px solid transparent;  
+        border-bottom: 55px solid transparent;
+        border-right: 30px solid transparent;
+        border-left: 30px solid transparent;
+        border-image: url(../../imgs/claudia/section-frame.svg) 50 30 70 30 stretch; */
+  width: 100%;
+  height: calc(100vh - 50px);
+  max-height: 1030px;
+  position: relative;
+  padding-top: 5rem;
+}
+.s1-content {
+  margin-top: 8% !important;
+}
+
+.s2-content,
+.s3-content,
+.s4-content {
+  margin-top: 3% !important;
+}
+/* ----------------------Process_Bar--------------------------------- */
+.process-bar {
+  background-color: transparent;
+  position: fixed;
+  z-index: 9999;
+  width: 617px;
+  height: 3.4rem;
+  bottom: 0px;
+  margin: auto;
+  left: 50%;
+  transform: translate(-45%, 0);
+  pointer-events: none;
+}
+.large-process-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: var(--green);
+}
+.large-process-bar {
+  border: 1px solid var(--pink);
+  width: 0%;
+  height: 2px;
+  background-color: var(--pink);
+  box-shadow: 0 0 0.25em var(--pink), 0.2px 0.2em 10px 0 var(--pink);
+}
+.large-pb-uikits-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid #ccc; */
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.large-pb-uikits {
+  background-color: #35517b;
+  color: var(--green);
+  text-align: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  font-size: 1.5rem;
+}
+.active {
+  border: 2px solid var(--pink);
+  box-shadow: 0 0 0.2em var(--pink), 0 0 5px 0 var(--pink);
+  transition-delay: 1s;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  background-color: var(--purple);
+}
+/* -------------------------HERO--------------------------- */
+.hero {
+  position: relative;
+  cursor: pointer;
+}
+.tag-top {
+  font-size: 1.5rem;
+  color: var(--green);
+  position: fixed;
+  top: 7.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+  z-index: 1000000;
+}
+.hero-video {
+  min-width: 100%;
+  min-height: calc(100vh - 50px);
+}
+.hero::after {
+  content: "";
+  background: url(../../imgs/claudia/hero-shoot.svg) no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.hero-title {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.hero h1 {
+  font-size: var(--h3);
+  color: var(--white);
+  text-align: center;
+}
+.hero p {
+  font-size: var(--h5);
+  color: var(--pink);
+  text-align: center;
+}
+.hero a {
+  text-decoration: none;
+}
+.start-btn {
+  margin: auto;
+  border: transparent;
+  background-color: #f595f0;
+  backdrop-filter: blur(5px) !important;
+  color: var(--white);
+  animation: 1s Bounce ease infinite;
+  pointer-events: none;
+}
+@keyframes Bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ----------------------Section & Title--------------------------- */
+.title {
+  font-size: var(--h4);
+  color: var(--white);
+}
+.title-qus {
+  font-size: var(--p);
+  color: var(--green);
+}
+.btn-previous,
+.btn-next {
+  background: transparent;
+  border: none;
+  position: absolute;
+  bottom: 2.5%;
+  font-size: var(--h5);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-previous {
+  color: var(--green);
+  left: 3%;
+}
+.btn-previous:hover {
+  color: transparent;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--green);
+}
+.btn-next {
+  color: var(--pink);
+  right: 3%;
+  animation: 1s Bounce ease infinite;
+}
+.btn-next:hover {
+  color: transparent;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--pink) !important;
+}
+.remain-frame {
+  background: url(../../imgs/claudia/remain-frame.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  width: 18rem;
+  height: 14rem;
+  padding-top: 3rem;
+  /* animation: 5s RemainMove; */
+  text-align: center;
+}
+/* @keyframes RemainMove {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} */
+
+.remain-frame:hover {
+  background: url(../../imgs/claudia/remain-frame-hover.svg) no-repeat;
+  background-size: contain;
+  transition: 1s;
+}
+
+.remain-frame h2 {
+  color: var(--pink);
+  font-size: var(--h6);
+  text-align: center;
+}
+.remain-frame p {
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+/* ---------------------------S1_Price------------------------------- */
+.s1-content {
+  width: 70%;
+  margin-top: 20px;
+  margin: auto;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+.s1-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  padding: 0;
+}
+.s1 input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+.s1 .slider-track {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+.s1 input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+  z-index: 1000;
+}
+.s1 input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  height: 5px;
+}
+.s1 input[type="range"]::-ms-track {
+  appearance: none;
+  height: 5px;
+}
+.s1 input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.7em;
+  width: 1.7em;
+  background-color: var(--pink);
+  cursor: pointer;
+  margin-top: -9px;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+.s1 input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 1.7em;
+  width: 1.7em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--pink);
+  pointer-events: auto;
+}
+.s1 input[type="range"]::-ms-thumb {
+  appearance: none;
+  height: 1.7rem;
+  width: 1.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--pink);
+  pointer-events: auto;
+}
+.s1 input[type="range"]:active::-webkit-slider-thumb {
+  background-color: var(--white);
+  border: 5px solid var(--purple);
+}
+.values {
+  background-color: var(--pink);
+  width: 50%;
+  position: relative;
+  margin: auto;
+  padding: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--h5);
+  color: var(--purple);
+}
+.values:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 15px solid var(--pink);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  margin: auto;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+}
+.price-range-scale-group {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.price-range-scale {
+  height: 1rem;
+  width: 4px;
+  border-radius: 0.5rem;
+  background: var(--white);
+}
+.price-range-p {
+  font-size: var(--h6);
+  margin-bottom: 2rem;
+}
+.price-range-scale-dot {
+  height: 0.5rem;
+  width: 4px;
+  border-radius: 0.25rem;
+  background: var(--white);
+}
+.guitar-count {
+  color: var(--white);
+  display: block;
+  border: 2px dashed var(--pink);
+  margin: auto;
+  text-align: center;
+  width: 40%;
+}
+.guitar-count span {
+  color: var(--green);
+  font-size: var(--h6);
+}
+
+/* ---------------------------S2_Color------------------------------- */
+.color-group {
+  width: 40vw;
+  height: 50vh;
+}
+.color-label {
+  width: 4.5rem;
+  height: 7rem;
+  border-radius: 2.25rem;
+  margin: auto;
+  text-align: center;
+}
+.color-circle {
+  width: 5rem;
+  height: 8rem;
+  position: relative;
+  /* border: 1px solid #fff; */
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.color-shoot {
+  background: url(../../imgs/claudia/color-shoot.svg) center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.active1 {
+  opacity: 1;
+}
+.btn-select-p {
+  font-size: var(--p);
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+.btn-select-all {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--green);
+}
+.s2 input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.btn-select-all {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+.btn-select-all:hover {
+  transform: scale(1.1);
+  transition: 0.75s;
+  box-shadow: 0px 0px 8px var(--pink);
+}
+/* ------------------------------S3_Music--------------------------- */
+.s3-content {
+  width: 70%;
+}
+.vinyl-records {
+  width: 25rem;
+  height: 25rem;
+  background: url(../../imgs/claudia/vinyl-records-frame.svg) center center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.vinyl-records-img-group{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  border-radius:50% ;
+  /* border: 1px solid var(--white); */
+  overflow: hidden;
+}
+.vinyl-records-img-group img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  opacity: 0;
+}
+/* + type="button" */
+.active2{
+  opacity: 1;
+  animation:Vinyl_Rotate 4s linear infinite;
+}
+
+
+.btn-music{
+position: relative;
+background-color: transparent;
+color: var(--green);
+width: 80%;
+margin: auto;
+height: 36px;
+text-align: center;
+font-size: calc(3 / 375 * 100vw);
+line-height: calc(3 / 375 * 100vw);
+border: 1px solid var(--green);
+display: block;
+}
+.btn-music:hover{
+transition: 0.75s;
+transform: scale(1.1);
+font-size: calc(3.5 / 375 * 100vw);
+}
+.btn-music.active3{
+border: 1px solid var(--pink);
+box-shadow: 0px 0px 5px var(--pink);
+color: var(--pink);
+transition: 0.75s;
+transform: scale(1.1);
+font-size: calc(3.5 / 375 * 100vw);
+}
+.btn-music.active4{
+border: 1px solid var(--pink);
+box-shadow: 0px 0px 2px var(--pink);
+color: var(--purple);
+transition: 0.75s;
+transform: scale(1.1);
+background-color: var(--pink);
+font-size: calc(3.5 / 375 * 100vw);
+font-weight: 600;
+}
+.vinyl-records-img-group::before{
+  content: "";
+  background: url(../../imgs/claudia/Music_Img/Default.svg) center center no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 100;
+}
+/* animation: Vinyl_Rotate 5s linear infinite */
+
+@keyframes Vinyl_Rotate {
+100% {
+  transform: rotate(360deg);
+}
+}
+
+/* s3-sound 刪掉改下面 */
+.s3 p,.s4 p{
+position: relative;
+display: inline-block;
+}
+
+.s3-sound,.s4-sound {
+border: none;
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translate(0,-50%);
+height: 3.5rem;
+width: 3.5rem;
+border-radius: 50%;
+background-color: transparent;
+border: 1px solid var(--green);
+}
+
+.s3-sound i,.s4-sound i{
+position: absolute;
+font-size: 32px;
+color: var(--green);
+opacity: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.playing_icon{
+	height: 1.25em;
+  font-size:10px;
+  top: 50%;
+  margin: -2em 0 0;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 90%;
+  left: -10%;
+}
+
+.playing_icon .bar {
+  background: var(--pink);
+  width: 0.3em;
+  margin: 0 0.1em;
+  animation: playing 0ms -1000ms linear infinite alternate;
+}
+
+.playing_icon .bar:nth-child(5n+1) {
+  animation-duration: 420ms;
+}
+.playing_icon .bar:nth-child(5n+2) {
+  animation-duration: 435ms;
+}
+.playing_icon .bar:nth-child(5n+3) {  
+  animation-duration: 489ms;
+}
+
+@keyframes playing {
+  0% {
+   opacity: .4;
+   height: .2em;
+  }
+  100% {  
+    opacity: 1;
+    height: 4em;        
+  }
+}
+
+/* --------------------------S4_Tone----------------------------- */
+.s4 {
+  position: relative;
+}
+.tone-pink {
+  width: 7rem;
+  height: 24rem;
+  border: 2px solid var(--pink);
+  border-radius: 3.5rem;
+  background: linear-gradient(0deg, var(--pink), #f595f000);
+}
+.tone-green {
+  width: 7rem;
+  height: 24rem;
+  border: 2px solid var(--green);
+  border-radius: 3.5rem;
+  background: linear-gradient(0deg, #f595f000, var(--green));
+}
+.tone-green,
+.tone-pink {
+  color: white;
+  position: relative;
+}
+.tone-green p,
+.tone-pink p {
+  margin: 0;
+}
+.tone-p-dark {
+  color: var(--purple);
+}
+.tone-point-p {
+  rotate: 180deg;
+}
+/* ----------------S4(0505)-------------------- */
+.tone-point-g{
+  position: absolute;
+  top: 50%;
+  left: -60%;
+  transform: translate(0,-50%);
+}
+.tone-point-p{
+  position: absolute;
+  top: 50%;
+  left: 130%;
+  transform: translate(0,50%);
+}
+.s4 input[type="range"] {
+  -webkit-appearance:none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: transparent;
+  margin: auto;
+  top: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin: auto;
+  z-index: 100;
+}
+
+.s4 input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+  z-index: 1000;
+  cursor: pointer;
+} 
+
+.s4 input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3em;
+  width: 3em;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: -9px;
+  pointer-events: auto;
+  outline: transparent;
+}
+.s4 input[type="range"]:active::-webkit-slider-thumb {
+  background-color: transparent;
+
+} 
+
+.tone-input{
+  padding-top: 10px;
+  border: none;
+  position: absolute;
+  top: 40% !important;
+  left:-100% ;
+  transform: translate(0%,0%);
+  height: 6rem;
+  width: 21rem !important;
+  rotate: 90deg;
+  cursor: pointer !important;
+}
+/* --------------------------S5_Size & S6_Hand---------------------------- */
+.s5-container,
+.s6-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 8%;
+}
+.s5 button,
+.s6 button {
+  background-color: transparent;
+  border: none;
+}
+.s5-container button {
+  padding-left: 2rem;
+  /* border: 1px solid #ccc; */
+}
+.s5 h6,
+.s6 h6 {
+  font-size: var(--h6);
+  color: var(--white);
+  /* border:  1px solid #ccc; */
+}
+.guitar-size-radio {
+  background: url(../../imgs/claudia/ele-size.svg) center center no-repeat;
+  background-size: contain;
+  height: 150px;
+  width: 100%;
+}
+.guitar-size-small,
+.guitar-size-large {
+  position: relative;
+}
+.check-gs-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../../imgs/claudia/check-gs-circle.svg) center center
+    no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.check-hand-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../../imgs/claudia/hand-choose.svg) center center no-repeat;
+  background-size: contain;
+  width: 150%;
+  height: 150%;
+}
+.size-label,
+.hand-choose-label {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.guitar-size-input,
+.hand-choose-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.ele-s-size {
+  height: 150px;
+  width: 100%;
+}
+.ele-l-size {
+  height: 192px;
+  width: 100%;
+}
+.right-hand-img,
+.left-hand-img {
+  width: 100%;
+  height: 111px;
+}
+.left-hand-group,
+.right-hand-group {
+  position: relative;
+}
+/* -----------------------S7-Loading------------------------------ */
+.s7 {
+  position: relative;
+}
+.s7-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.s7-content h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--white);
+  font-size:var(--h5) ;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--pink) ;
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  display: inline-block;
+}
+
+@keyframes Typing {
+  from { width: 0 }
+  to { width: 220px }
+}
+
+@keyframes BlinkCaret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--pink) }
+}

@@ -1,0 +1,369 @@
+:root {
+    --purple: #292560;
+    --green: #66fee6;
+    --pink: #f595f0;
+    --gray: #dfdfdf;
+    --white: #ffffff;
+    --black: #000000;
+    --h2: 58px;
+    --h3: 50px;
+    --h4: 34px;
+    --h5: 30px;
+    --h6: 24px;
+    --p: 19px;
+    --small: 12px;
+    --frame-hight: 25px;
+    --frame-width: 43px;
+  }
+  /* * {
+    outline: 1px solid red;
+  } */
+  body {
+    /* overflow: hidden; */
+    position: relative;
+    font-family: "Chakra Petch", sans-serif;
+    background: var(--purple);
+  }
+  header {
+    background: var(--purple);
+    height: 50px;
+    width: 100%;
+    position: fixed !important;
+    z-index: 100000 !important;
+    top: 0;
+  }
+  .custom-index {
+    background-image: linear-gradient(to top, var(--black), #48a1ce, var(--black));
+    /* background:url(../../imgs/claudia/custom-bg.svg) center center no-repeat; */
+    /* background-size: cover; */
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 50px) ;
+  }
+  /* .custom-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc28;
+     backdrop-filter: blur(5px) !important;
+  } */
+  .custom-content {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .custom-guitar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    /* border: 1px solid #ccc; */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  } 
+
+  .active5{
+    display: inline-block;
+  }
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .custom-box-group {
+    box-shadow: 0px 10px 10px #442999;
+    /* border-radius: 10%; */
+    border: 5px solid transparent;
+    -moz-border-image: -moz-linear-gradient(
+      top right,
+      #312999 0%,
+      var(--pink) 100%
+    );
+    -webkit-border-image: -webkit-linear-gradient(
+      top right,
+      #312999 0%,
+      var(--pink) 100%
+    );
+    border-image: linear-gradient(to left, #312999 0%, var(--pink) 100%);
+    border-image-slice: 1;
+  }
+  .choose-group::before{
+    content: "";
+    background: url(../../imgs/claudia/rotate-3.svg) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    width: 70px;
+    height: 70px;
+  }
+  .custom-box-top {
+    position: relative;
+    background-image: linear-gradient(to right top, #312999, #297199);
+    height: 50px;
+    width: 100%;
+  }
+  .custom-box {
+    height: 100%;
+    width: 100%;
+    height: 30rem;
+  }
+  .btn-next {
+    position: fixed;
+    bottom: 2%;
+    right: 10px;
+    background: #292560;
+    z-index: 9999999999;
+    font-size: var(--h6);
+    color: var(--white);
+    border: 0;
+    border-radius: 5px;
+  }
+  .btn-next:hover{
+    color: var(--pink);
+    transition: 0.75s;
+  }
+  /* --------------------------Custom_Box_Top_BTN-------------------------- */
+  .custom-box-top-title {
+    font-size: var(--p);
+    color: var(--pink);
+  }
+  .custom-box-top-btn {
+    border: none;
+    margin-left: 6px;
+    box-shadow: inset -1px -1px #312999, inset 1px 1px var(--pink), inset -2px -2px #7c52b9, inset 2px 2px #b3556e;
+    background-color: transparent;
+  }
+  /* ------------------Color_Box_Frame------------------------------------ */
+  .choose-group {
+    position: absolute;
+    bottom: 50%;
+    left:70%;
+    transform: translate(0, 50%);
+    box-shadow: inset -2px -2px #312999, inset 2px 2px var(--pink), inset -4px -4px #7c52b9, inset 4px 4px #b3556e;
+    background-color: hsla(0, 0%, 100%, 0.124) !important;
+    backdrop-filter: blur(5px) !important;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .choose-group p{
+    font-size: var(--p);
+    color: var(--pink);
+    overflow: hidden;
+  }
+
+  /* ------------------Color_Box---------------------------- */
+
+  .body-choose-box {
+    position: relative;
+    width: 115px;
+    height: 115px;
+    /* border: 5px solid rgba(0, 0, 0, 0.276); */
+    /* box-shadow: inset -2px -2px #312999, inset 2px 2px var(--pink), inset -4px -4px #7c52b9, inset 4px 4px #b3556e; */
+    border-radius: 5px;
+    background-origin: border-box;
+    padding: 4px;
+    overflow: hidden;
+  }
+  .body-choose-box label{
+    /* box-shadow: inset -2px -2px #312999, inset 2px 2px var(--pink), inset -4px -4px #7c52b9, inset 4px 4px #b3556e; */
+    width: 100%;
+    height: 100%;
+  }
+  .body-choose-box:hover{
+    transform: scale(1.1);
+    transition: 0.75s;
+  }
+  .body-label label{
+    border-radius: 50%;
+    box-shadow: inset -2px -2px #312999, inset 2px 2px var(--pink), inset -4px -4px #7c52b9, inset 4px 4px #b3556e;
+  }
+
+  .checked-img{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  .checked-img img{
+    width: 20px;
+    height: 20px;
+  }
+  .active{
+    opacity: 1;
+  }
+  /* .color-box input {
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    overflow: hidden;
+  } */
+  .color-check {
+    position: relative;
+    height: 50px !important;
+    width: 50px !important;
+  }
+  .color-check i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    font-size: var(--h6);
+    color: var(--white);
+    opacity: 1;
+    z-index: 100000;
+  }
+
+  /* -------------------Frame----------------------- */
+  .card-big-frame-top {
+    position: absolute;
+    top: 1rem;
+    left: 40%;
+    /* transform: translate(-50%, -50%); */
+    font-size: var(--p);
+    color: var(--white);
+    z-index: 9999999;
+    padding-right: 8rem;
+    padding-left: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #292560;
+    transform-origin: bottom center;
+    transform: perspective(200px) rotateX(-40deg);
+  }
+  .card-big-frame {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100000;
+  }
+  .frame-border {
+    background: #292560;
+    /* opacity: .8; */
+    position: absolute;
+  }
+  .corner {
+    position: absolute;
+    width: var(--frame-width);
+    height: var(--frame-width);
+    background: url(../../imgs/claudia/card/corner.svg) center center no-repeat ;
+    background-size: cover;
+  }
+  .top {
+    width: calc(100% - var(--frame-width) * 2);
+    height: var(--frame-hight);
+    left: var(--frame-width);
+    top: 0;
+  }
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+  .right {
+    width: var(--frame-hight);
+    height: calc(100% - var(--frame-width) * 2);
+    right: 0;
+    top: var(--frame-width);
+  }
+  .top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+  }
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
+  .bottom {
+    width: calc(100% - var(--frame-width) * 2);
+    right: var(--frame-width);
+    height: var(--frame-hight);
+    bottom: 0;
+  }
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+  .left {
+    width: var(--frame-hight);
+    top: var(--frame-width);
+    height: calc(100% - var(--frame-width) * 2);
+    left: 0;
+  }
+  /* ------------------------------Mobile--------------------------------- */
+  @media screen and (max-width: 768px) {
+    .custom-index{
+      height: calc(100vh - 50px);
+      width: 100%;
+    }
+    .card-big-frame{
+      display: none;
+    }
+    .card-big-frame-top {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      transform: rotate(0);
+      top: 0;
+      left: 0;
+      background-color: transparent;
+    }
+    .custom-box-top{
+      height: 40px;
+    }
+    .custom-box-top-btn {
+      font-size: 15px;
+      margin-left: 3px;
+    }
+    .choose-group{
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%,0);
+      width: 100%;
+      z-index: 99999999;
+    }
+    .color-group-content {
+      display: none;
+    }
+    .body-choose-box {
+      height: aspect-ratio;
+      width: 30%;
+    }
+    .choose-group p{
+      font-size: 1rem;
+      writing-mode: vertical-lr;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    .btn-next {
+    top: 50px;
+    bottom: 100%;
+    right: 0;
+    font-size: var(--h6);
+    height: 50px;
+    background-color: var(--purple);
+    border-radius: 0 0 0 5px;
+    }
+  }

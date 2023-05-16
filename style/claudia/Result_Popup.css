@@ -1,0 +1,636 @@
+.font-One {
+    font-family: 'Black Ops One', sans-serif;
+    color: #66FEE6;
+}
+
+.font-Chakra {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #66FEE6;
+}
+
+.font-zh {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #66FEE6;
+    letter-spacing: 1.4px;
+
+}
+
+
+.red{
+    background:linear-gradient(
+        40.34deg,
+        rgb(231, 29, 8) 3.49%,
+        rgb(139, 0, 24) 180.91%
+    );
+}
+.yellow{
+    background: linear-gradient(
+                    208.38deg,
+                    rgb(222, 200, 0) -92.96%,
+                    rgb(255, 200, 114) 118.57%
+                  )
+}
+.blue{
+   background-image: linear-gradient(
+        to top,
+        #4481eb 0%,
+        #04befe 100%
+      );
+}
+.orange{
+    background: linear-gradient(
+        144.09deg,
+        rgb(255, 158, 88) -5.26%,
+        rgb(238, 97, 12) 138.96%
+      );
+}
+.green{
+    background-image: linear-gradient(
+        to top,
+        #0ba360 0%,
+        #3cba92 100%
+      );
+}
+.purple{
+    background-image: linear-gradient(
+        to top,
+        #8f0dc7 0%,
+        #b224ef 100%
+      );
+}
+.white{
+    background: linear-gradient(
+        204.8deg,
+        rgb(228, 224, 214) -54.17%,
+        rgb(255, 255, 255) 178.23%
+      );
+}
+.black{
+    background: linear-gradient(
+                    330.43deg,
+                    rgb(0, 0, 0) 0%,
+                    rgb(104, 104, 104) 223.01%
+                  );
+}
+.nature{
+    background-image: url(../../imgs/claudia/natural.svg);
+    background-size: cover;
+}
+
+.brown{
+    background: rgb(142,67,6);
+background: linear-gradient(200deg, rgba(142,67,6,1) 34%, rgba(112,62,20,1) 86%);
+}
+.burst {
+    background: linear-gradient(54deg, rgba(2, 0, 36, 1) 0%, rgba(121, 72, 9, 1) 47%, rgba(255, 241, 0, 1) 100%);
+}
+
+.others {
+    background: linear-gradient(58deg, rgba(238, 174, 202, 1) 0%, rgba(206, 219, 177, 1) 21%, rgba(209, 178, 212, 1) 31%, rgba(181, 219, 205, 1) 50%, rgba(199, 181, 220, 1) 66%, rgba(167, 227, 185, 1) 79%, rgba(148, 187, 233, 1) 100%);
+
+}
+
+/* ---------------------- */
+/* * {
+    outline: 1px solid red;
+} */
+
+body {
+    background-color: #6F7184;
+}
+
+.nav {
+    height: 40px;
+    width: 100%;
+}
+
+
+.page-head {
+    border-bottom: #66FEE6 2px solid;
+    height: 60px;
+    position: relative;
+}
+
+.page-head h3 {
+    font-size: 28px;
+}
+
+.backBtn {
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    top: 42px;
+    left: 32px;
+}
+
+.cp-item {
+    border: #66FEE6 1px solid;
+}
+
+.cp-item .imgwrap {
+    width: 100%;
+
+}
+
+.cp-item .imgwrap img {
+    transform: rotate(90deg);
+
+}
+
+.qkviewBtn p {
+    color: #292560;
+    user-select: none;
+    cursor: pointer;
+}
+
+.spec-content {
+    border-top: #66FEE6 3px solid;
+    padding-top: 16px;
+    margin-top: 4px;
+}
+
+.table th {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #66FEE6;
+    font-size: 22px;
+    height: 72px;
+    line-height: 28px;
+    border-bottom: #66FEE6 1px solid;
+}
+
+.table td {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #fff;
+    font-size: 19px;
+    width: 350px;
+    word-wrap: break-word;
+    text-align: center;
+    height: 72px;
+    line-height: 28px;
+    border-bottom: #66FEE6 1px solid;
+    padding-top: 24px;
+}
+
+.imgName.fixed {
+    position: fixed;
+    top: 50px;
+    transition: 2s linear;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px)
+}
+
+.imgName.fixed .imgwrap {
+    margin-bottom: 0px;
+}
+
+.imgName.fixed .item-name P {
+    word-wrap: break-word;
+    text-align: center;
+    height: 90px;
+    padding: 0;
+}
+
+/* 快速瀏覽頁 */
+.qkViewSec{
+    display: none;
+}
+
+.viewbg {
+    width: 100%;
+    height: 100vh;
+    background: rgba(34, 43, 126, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* 改背景 */
+.qkview {
+    width: 1300px;
+    height: 700px;
+    background: #2b305c;
+    /* border: 2px solid #F595F0; */
+    box-shadow: 0px 0px 10px 4px var(--pink);
+    border-radius: 20px;
+    position: relative;
+    user-select: none;
+}
+
+.text-line {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    border-top: #66FEE6 2px solid;
+    border-left: #66FEE6 2px solid;
+}
+
+.prod-name h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.mybtn {
+    position: relative;
+    color: #90bdb6;
+    user-select: none;
+    cursor: pointer;
+}
+
+.goProdBtn {
+    position: absolute;
+    top: 42px;
+    left: 68px;
+    color: #66FEE6;
+}
+
+.cartBtn {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    color: #292560;
+}
+.content-item,.prod-feature h5  {
+    color: #66FEE6;
+    user-select: none;
+}
+.content-item h5,.prod-feature h5  {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    border-bottom: #66FEE6 2px solid;
+}
+.prod-content p {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 21px;
+    color: #ffffff;
+}
+.prod-content .price-1,.prod-content .price-2,.prod-content .price-3{
+    font-size: 1rem !important;
+}
+
+
+.color {
+    width: 33px;
+    height: 33px;
+    margin: 0 4px;
+}
+
+.prod-feature li{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align:start;
+    /* word-break: normal; */
+}
+
+.prod-feature li{
+    list-style: square; 
+    margin-bottom: 10px;
+    line-height:22px
+}
+.viewbg .Xbtn{
+    position: absolute;
+    top:-25px;
+    right: -20px;
+}
+
+
+
+/* 手機版 */
+@media (max-width: 767px) {
+    .container {
+        padding: 16px;
+    }
+
+    .back {
+        position: absolute;
+        top: 40px;
+        left: 22px;
+        font-weight: 300;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .cp-item {
+        width: 170px;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 16px 8px;
+        gap: 14px;
+        user-select: none;
+    }
+
+    .card-head-img {
+        width: 100px;
+        height: 25px;
+        background: url(../../imgs/joyce/mobile/prodrecom.svg) no-repeat center -2px;
+        background-size: 100%;
+    }
+
+    .card-head-img p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #292560;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .cp-item .imgwrap {
+        height: 50px;
+        margin-bottom: 16px;
+    }
+
+    .cp-item .imgwrap img {
+        width: 38%;
+    }
+    .item-name p {
+        height: 80px;
+    }
+
+    .cp-item p {
+        letter-spacing: 1px;
+    }
+
+    .qkviewBtn p {
+        font-size: 14px;
+        line-height: 22px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .qkviewBtn {
+        width: 125px;
+        height: 25px;
+        background: url(../../imgs/joyce/bg/sub_button.svg) no-repeat center;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .spec-content {
+        margin-top: 4px;
+    }
+
+    /* 手機版rwd 隱藏title */
+    .table tbody th{
+        display: none;
+    }
+
+    .imgName.fixed {
+        width: 175px;
+    }
+
+    .imgName.fixed .imgwrap {
+        padding-top: 16px;
+    }
+
+    .imgName.fixed .imgwrap img {
+        width: 25%;
+    }
+
+    .imgName.fixed .item-name P {
+        font-size: 14px;
+        width: 180px;
+        height: 70px;
+        padding: 16px 12px;
+
+    }
+
+    /* 手機 商品概覽頁 */
+    .viewbg{
+        z-index: 9999;
+        position: fixed;
+        padding-top: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: rgba(34, 43, 126, 0.623);
+        backdrop-filter: none;
+    }
+
+    .qkview {
+        margin-top: 30px;
+        width: 340px;
+        height: 600px;
+        padding: 32px 4px;
+    }
+    .prod-name h1 {
+        font-size: 24px;
+        padding: 4px 8px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        
+    }
+    .imgWrap {
+        width: 100%;
+        height: 200px;
+        background: url(../../imgs/joyce/pdetail-bg.svg) no-repeat center;
+        background-size: 100%;
+    }
+    
+    .prod-img {
+        position: relative;
+        margin: 0px 0 40px 0;
+    }
+    .imgWrap img{
+        transform: rotate(90deg);
+        width: 30%;
+    }
+    
+    .prodImg-like {
+        display: block;
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+    }
+    
+    .slider-dots {
+        position: absolute;
+        bottom: -36px;
+        left: 0;
+    }
+    
+    .slider-dots li {
+        width: 28px;
+        height: 8px;
+        margin: 0 4px;
+        border: 1px solid #66FEE6;
+        border-radius: 20px;
+    }
+
+    .goProdBtn {
+        position: absolute;
+        top: 42px;
+        left: 40px;
+        color: #66FEE6;
+    }
+    
+    .cartBtn {
+        position: absolute;
+        top: 40px;
+        left:30px;
+        color: #292560;
+    }
+
+}
+
+
+/* 桌機版 */
+@media (min-width: 768px) {
+    .container {
+        padding: 16px 130px;
+        max-width: 1660px;
+    }
+
+    .cp-item {
+        width: 350px;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 8px 16px;
+        gap: 38px;
+        user-select: none;
+    }
+
+    .card-head-img {
+        width: 152px;
+        height: 32px;
+        background: url(../../imgs/joyce/mobile/prodrecom.svg) no-repeat center -5px;
+    }
+
+    .card-head-img p {
+        font-size: 19px;
+        line-height: 28px;
+        color: #292560;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .cp-item .imgwrap {
+        margin-bottom: 32px;
+        height: 100px;
+    }
+
+    .cp-item .imgwrap img {
+        width: 30%;
+    }
+
+    .imgName.fixed .imgwrap img {
+        width: 15%;
+    }
+
+    .imgName.fixed .item-name P {
+        font-size: 19px;
+        width: 350px;
+    }
+
+    .item-name P,
+    .item-price p {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 2px;
+    }
+
+    .item-name P {
+        padding-left: 16px;
+        height: 90px;
+
+    }
+
+    .qkviewBtn p {
+        font-size: 19px;
+        line-height: 42px;
+
+    }
+
+    .qkviewBtn {
+        width: 200px;
+        height: 40px;
+        background: url(../../imgs/joyce/bg/sub_button.svg) no-repeat center;
+        background-size: 100%;
+    }
+
+    /* ˋ桌機 商品概覽頁 */
+    .viewbg{
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+      
+    }
+
+    .prod-name h1 {
+        font-size: 36px;
+        letter-spacing: 2px;
+        line-height: 42px;
+    }
+    .prod-img{
+        width: 100%;
+        position: relative;
+    }
+
+    .imgWrap-web {
+        width: 100%;
+        height: 500px;
+        margin-top: 20px;
+        /* background: url(../../imgs/joyce/web-pdetail-bg.svg) no-repeat top; */
+        background: url(../../imgs/joyce/web-qkviewProd-bg.svg) no-repeat top right;
+        background-size: 82%;
+    }
+  
+    .imgWrap-web img{
+        /* width: 32%; */
+        margin-right: 25%;
+    }
+
+    .prodImg-like {
+        display: block;
+        position: absolute;
+        right:5px;
+        bottom: 10px;
+    }
+   
+    .qkviewFram{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .switchItem .prevbtn{
+        position: absolute;
+        top: 40%;
+        left: -6px;
+    }
+    .switchItem .prevbtn:hover{
+        filter: drop-shadow(0 0 10px #66FEE6);
+
+    }
+     .switchItem .nextbtn{
+        position: absolute;
+        top: 40%;
+        right: -6px;
+    }
+      .switchItem .nextbtn:hover{
+        filter: drop-shadow(0 0 15px #66FEE6);
+
+    }
+
+    .detail-imgwrap img{
+        width: 80px;
+        height: 80px;
+        border: #66FEE6 1px solid;
+        margin-right: 8px;
+        object-fit: contain;
+        background-color: #fff;
+    }
+    
+    .detail-imgwrap img:nth-child(2){
+        display: none;
+    }
+    .detail-imgwrap img:not(img:nth-child(1)){
+        object-fit: cover;
+    }
+
+}
