@@ -93,7 +93,7 @@ body {
   background-color: transparent;
   position: fixed;
   z-index: 9999;
-  width: 617px;
+  width: 520px;
   height: 3.4rem;
   bottom: 0px;
   margin: auto;
@@ -255,7 +255,7 @@ body {
   position: absolute;
   top: 2rem;
   right: 3rem;
-  width: 18rem;
+  width: 16rem;
   height: 14rem;
   padding-top: 3rem;
   /* animation: 5s RemainMove; */

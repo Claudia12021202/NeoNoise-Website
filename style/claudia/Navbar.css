@@ -114,7 +114,7 @@
 
     .navbar_all {
         margin-top: 10px;
-        height: 40px !important;
+        /* height: 40px !important; */
         padding-left: 130px;
         padding-right: 130px;
 
