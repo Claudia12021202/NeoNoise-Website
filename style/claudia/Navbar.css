@@ -1,0 +1,396 @@
+*{
+    /* outline: 1px solid red; */
+}
+:root {
+    --dark: #292560;
+    --light: #66fee6;
+    --pink: #f595f0;
+    --gray: #dfdfdf;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* navbar css 開始*/
+
+.navbar_all {
+    /* font-family: 'Noto Sans TC'; */
+    /* font-weight: 100; */
+    letter-spacing: 1px;
+}
+
+.control_scaling_wrap {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.control_scaling_icon {
+
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    /* width: 24px !important;
+    height: 24px !important; */
+
+}
+
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+
+}
+
+.logo-icon {
+    /* font-size: 24px; */
+    /* color: rgb(0, 0, 0); */
+    width: 32px;
+    height: 32px;
+}
+
+.navbar_all {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    transition: all 0.5s ease;
+}
+
+/* Eddie : 手機版隱藏按鈕 */
+.hidden {
+    transform: translateX(calc(100% - 211px));
+}
+
+.navbar-glass {
+    /* background-color: hsla(0, 0%, 100%, 0.064) !important; */
+    /* backdrop-filter: blur(5px) !important; */
+
+    background-color: hsla(0, 0%, 100%, 0.104) ;
+    backdrop-filter: blur(10px) !important;
+
+
+    
+    /* background-color: hsla(0, 0%, 100%, 0.254) !important;
+    backdrop-filter: blur(10px) !important; */
+
+
+    /* border-top: 1px solid hsla(0,0%,100%,.1); */
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.navbar-glass-items-all {
+    background-color: hsla(0, 0%, 100%, 0.154) !important;
+    /* backdrop-filter: blur(10px) !important; */
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.navbar_button {
+    font-size: 16px !important;
+    height: 100%;
+    /* background-color: hsla(0, 0%, 100%, 0.064) !important;
+    backdrop-filter:blur(5px) !important;  */
+
+}
+.navbar_button ul{
+    line-height: 40px;
+}
+.navbar_button_icon {
+    font-size: 16px !important;
+    /* width: 5.3333333% !important; */
+}
+
+.border-line-left {
+    border-left: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+
+
+
+/* navbar 控制橫幅 開始 */
+
+
+/* Eddie : 電腦版隱藏按鈕 */
+@media screen and (min-width:768px) {
+
+    .navbar_all {
+        margin-top: 10px;
+        height: 40px !important;
+        padding-left: 130px;
+        padding-right: 130px;
+
+    }
+
+   
+    
+}
+
+/* navbar 控制橫幅 結束 */
+
+/* 手機板 漢堡打開選單 開始 */
+
+.hamburger {
+    width: 22px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    /* display: inline-block; */
+    z-index: 100;
+}
+
+.hamburger span {
+    background: #fff;
+    display: block;
+    position: absolute;
+    height: 2.3px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -moz-transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -o-transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity: 1;
+    width: 100%;
+    left: 0;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+.hamburger.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+/* 點擊事件 */
+
+.menu-overlay {
+    position: fixed;
+    left: 0;
+    top: -200vw;
+    width: 100%;
+    height: 100vh;
+    background: #292560;
+    opacity: 0;
+    visibility: visible;
+    z-index: 111 !important;
+    text-align: center;
+    display: table;
+    -webkit-transition: visibility 0.5s ease, opacity 1s ease;
+    -moz-transition: visibility 0.5s ease, opacity 1s ease;
+    -o-transition: visibility 0.5s ease, opacity 1s ease;
+    transition: visibility 0.5s ease, opacity 1s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+}
+
+.nav {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav li {
+    margin: 20px 0;
+    -moz-transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.open .nav li {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.open .nav li:nth-child(1) {
+    -webkit-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.open .nav li:nth-child(2) {
+    -webkit-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.open .nav li:nth-child(3) {
+    -webkit-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.open .nav li:nth-child(4) {
+    -webkit-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+
+.open .nav li:nth-child(5) {
+    -webkit-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.open .nav li:nth-child(6) {
+    -webkit-transition-delay: 600ms;
+    transition-delay: 600ms;
+}
+
+.open .nav li:nth-child(7) {
+    -webkit-transition-delay: 700ms;
+    transition-delay: 700ms;
+}
+
+.open .nav li:nth-child(8) {
+    -webkit-transition-delay: 800ms;
+    transition-delay: 800ms;
+}
+
+.nav a {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+.menu-overlay {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+}
+
+
+
+
+
+/* 服務項目彈跳其他分頁 開始*/
+
+.drop_btn ul {
+    width: 100% !important;
+    /* position: absolute;
+    top: 34px; */
+
+}
+.drop_content{
+    display: none;
+}
+.service_items_action02 ul {
+    width: 100% !important;
+    /* position: absolute;
+    top: 34px; */
+
+}
+
+.drop_btn:hover .drop_content{
+    display: block;
+}
+
+.drop_content_btn a{
+    color: white;
+}
+.drop_content_btn:hover{
+    background-color: #2925607c;
+}
+/* 服務項目彈跳其他分頁 結束*/
+
+
+ /* navbar 頭貼 手機版 */
+@media (max-width: 767px) {
+/* .headSec{
+    width: 33px;
+    height: 33px;
+} */
+.hidden {
+    transform: translateX(calc(100% - 79px));
+}
+.nav_head_imgwrap{
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .nav_head_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .navbar_button_icon {
+   
+        width: unset;
+    }
+    .cart_btn ,.menu_btn,.member_btn{
+        width: 33px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+/* navbar 頭貼 桌機版 */
+@media (min-width: 768px) {
+    .nav_head_imgwrap{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .nav_head_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .navbar_button_icon {
+        width: 5.3333333%!important;
+    }
+    .cart_btn ,.menu_btn,.member_btn{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+    /* navbar css 結尾 */

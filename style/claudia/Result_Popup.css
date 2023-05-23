@@ -99,12 +99,6 @@ body {
     background-color: #6F7184;
 }
 
-.nav {
-    height: 40px;
-    width: 100%;
-}
-
-
 .page-head {
     border-bottom: #66FEE6 2px solid;
     height: 60px;
@@ -201,7 +195,7 @@ body {
     width: 100%;
     height: 100vh;
     background: rgba(34, 43, 126, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 /* 改背景 */
@@ -237,14 +231,14 @@ body {
 
 .goProdBtn {
     position: absolute;
-    top: 42px;
+    top: 38px;
     left: 68px;
     color: #66FEE6;
 }
 
 .cartBtn {
     position: absolute;
-    top: 40px;
+    top: 38px;
     left: 60px;
     color: #292560;
 }
@@ -259,11 +253,11 @@ body {
 }
 .prod-content p {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 21px;
+    font-size: 1.5rem;
     color: #ffffff;
 }
 .prod-content .price-1,.prod-content .price-2,.prod-content .price-3{
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
 }
 
 
@@ -292,6 +286,7 @@ body {
     position: absolute;
     top:-25px;
     right: -20px;
+    cursor: pointer;
 }
 
 
@@ -425,7 +420,7 @@ body {
     .imgWrap {
         width: 100%;
         height: 200px;
-        background: url(../../imgs/joyce/pdetail-bg.svg) no-repeat center;
+        background: url(../../imgs/claudia/web-pdetail-bg.svg) no-repeat center;
         background-size: 100%;
     }
     
@@ -574,8 +569,7 @@ body {
         width: 100%;
         height: 500px;
         margin-top: 20px;
-        /* background: url(../../imgs/joyce/web-pdetail-bg.svg) no-repeat top; */
-        background: url(../../imgs/joyce/web-qkviewProd-bg.svg) no-repeat top right;
+        background: url(../../imgs/claudia/web-qkviewProd-bg.svg) no-repeat top right;
         background-size: 82%;
     }
   
